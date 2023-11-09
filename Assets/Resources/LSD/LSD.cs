@@ -72,50 +72,19 @@ public class LSD : CogsAgent
         discreteActionsOut[3] = 0; //....................3
         discreteActionsOut[4] = 0; //....................4
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            discreteActionsOut[0] = 1;
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            discreteActionsOut[0] = 2;
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            discreteActionsOut[1] = 1;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            discreteActionsOut[1] = 2;
-        }
-
-        //Shoot
-        if (Input.GetKey(KeyCode.Space))
-        {
-            discreteActionsOut[2] = 1;
-        }
-
-        //GoToNearestTarget
-        if (Input.GetKey(KeyCode.A))
-        {
-            discreteActionsOut[3] = 1;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            discreteActionsOut[4] = 1;
-        }
+        if (Input.GetKey(KeyCode.UpArrow))    discreteActionsOut[0] = 1;
+        if (Input.GetKey(KeyCode.DownArrow))  discreteActionsOut[0] = 2;
+        if (Input.GetKey(KeyCode.RightArrow)) discreteActionsOut[1] = 1;
+        if (Input.GetKey(KeyCode.LeftArrow))  discreteActionsOut[1] = 2;
+        if (Input.GetKey(KeyCode.Space))      discreteActionsOut[2] = 1; //Shoot
+        if (Input.GetKey(KeyCode.A))          discreteActionsOut[3] = 1; //GoToNearestTarget
+        if (Input.GetKey(KeyCode.S))          discreteActionsOut[4] = 1;
     }
 
     // What to do when an action is received (i.e. when the Brain gives the agent information about possible actions)
     public override void OnActionReceived(ActionBuffers actions)
     {
         int forwardAxis = (int)actions.DiscreteActions[0]; //NN output 0
-
-        //TODO-1: Set these variables to their appopriate item from the act list
         int rotateAxis = (int)actions.DiscreteActions[1];
         int shootAxis = (int)actions.DiscreteActions[2];
         int goToTargetAxis = (int)actions.DiscreteActions[3];
@@ -179,59 +148,49 @@ public class LSD : CogsAgent
         Vector3 right = transform.up;
         Vector3 left = -transform.up;
 
-        //fowardAxis:
-        // 0 -> do nothing
+        //forwardAxis:
+        // 0 -> do nothing. This case is not necessary to include, it's only here to explicitly show what happens in case 0
         // 1 -> go forward
         // 2 -> go backward
-        if (forwardAxis == 0)
+        switch (forwardAxis)
         {
-            //do nothing. This case is not necessary to include, it's only here to explicitly show what happens in case 0
-        }
-        else if (forwardAxis == 1)
-        {
-            dirToGo = forward;
-        }
-        else if (forwardAxis == 2)
-        {
-            //TODO-1: Tell your agent to go backward!
-            dirToGo = backward;
+            case 0:
+                break;
+            case 1:
+                dirToGo = forward;
+                break;
+            case 2:
+                dirToGo = backward;
+                break;
         }
 
         //rotateAxis:
         // 0 -> do nothing
         // 1 -> go right
         // 2 -> go left
-        if (rotateAxis == 0)
+        switch (rotateAxis)
         {
-            //do nothing
+            case 0:
+                break;
+            case 1:
+                rotateDir = right;
+                break;
+            default:
+                rotateDir = left;
+                break;
         }
-        else if (rotateAxis == 1)
-        {
-            rotateDir = right;
-        }
-        else
-        {
-            rotateDir = left;
-        }
-
-
-        //shoot
-        if (shootAxis == 1)
-        {
-            SetLaser(true);
-        }
-        else
-        {
-            SetLaser(false);
-        }
+        
+        
+        //shoot (equivalent to if else statement that we had)
+        SetLaser(shootAxis == 1);
 
         //go to the nearest target
-        if (goToTargetAxis == 1)
+        if (goToTargetAxis == 1) GoToNearestTarget();
         {
             GoToNearestTarget();
         }
 
-        if (goToBaseAxis == 1)
+        if (goToBaseAxis == 1) GoToBase();
         {
             GoToBase();
         }
