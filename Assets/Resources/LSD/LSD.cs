@@ -18,14 +18,14 @@ public class LSD : CogsAgent
 
     // For actual actions in the environment (e.g. movement, shoot laser)
     // that is done continuously
-    protected override void FixedUpdate() {
+    protected override void FixedUpdate()
+    {
         base.FixedUpdate();
 
         LaserControl();
         // Movement based on DirToGo and RotateDir
         moveAgent(dirToGo, rotateDir);
     }
-
 
 
     // --------------------AGENT FUNCTIONS-------------------------
@@ -51,7 +51,8 @@ public class LSD : CogsAgent
 
         // for each target in the environment, add: its position, whether it is being carried,
         // and whether it is in a base
-        foreach (GameObject target in targets){
+        foreach (GameObject target in targets)
+        {
             sensor.AddObservation(target.transform.localPosition);
             sensor.AddObservation(target.GetComponent<Target>().GetCarried());
             sensor.AddObservation(target.GetComponent<Target>().GetInBase());
@@ -63,7 +64,7 @@ public class LSD : CogsAgent
 
     // For manual override of controls. This function will use keyboard presses to simulate output from your NN
     public override void Heuristic(in ActionBuffers actionsOut)
-{
+    {
         var discreteActionsOut = actionsOut.DiscreteActions;
         discreteActionsOut[0] = 0; //Simulated NN output 0
         discreteActionsOut[1] = 0; //....................1
@@ -75,40 +76,43 @@ public class LSD : CogsAgent
         {
             discreteActionsOut[0] = 1;
         }
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             discreteActionsOut[0] = 2;
         }
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
             discreteActionsOut[1] = 1;
         }
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             discreteActionsOut[1] = 2;
         }
 
         //Shoot
-        if (Input.GetKey(KeyCode.Space)){
+        if (Input.GetKey(KeyCode.Space))
+        {
             discreteActionsOut[2] = 1;
         }
 
         //GoToNearestTarget
-        if (Input.GetKey(KeyCode.A)){
+        if (Input.GetKey(KeyCode.A))
+        {
             discreteActionsOut[3] = 1;
         }
 
-        if (Input.GetKey(KeyCode.S)) {
+        if (Input.GetKey(KeyCode.S))
+        {
             discreteActionsOut[4] = 1;
         }
-
     }
 
-        // What to do when an action is received (i.e. when the Brain gives the agent information about possible actions)
-        public override void OnActionReceived(ActionBuffers actions){
-
-
-
+    // What to do when an action is received (i.e. when the Brain gives the agent information about possible actions)
+    public override void OnActionReceived(ActionBuffers actions)
+    {
         int forwardAxis = (int)actions.DiscreteActions[0]; //NN output 0
 
         //TODO-1: Set these variables to their appopriate item from the act list
@@ -125,22 +129,21 @@ public class LSD : CogsAgent
     // Called when object collides with or trigger (similar to collide but without physics) other objects
     protected override void OnTriggerEnter(Collider collision)
     {
-
-
-
-        if (collision.gameObject.CompareTag("HomeBase") && collision.gameObject.GetComponent<HomeBase>().team == GetTeam())
+        if (collision.gameObject.CompareTag("HomeBase") &&
+            collision.gameObject.GetComponent<HomeBase>().team == GetTeam())
         {
             //Add rewards here
         }
+
         base.OnTriggerEnter(collision);
     }
 
     protected override void OnCollisionEnter(Collision collision)
     {
-
-
         //target is not in my base and is not being carried and I am not frozen
-        if (collision.gameObject.CompareTag("Target") && collision.gameObject.GetComponent<Target>().GetInBase() != GetTeam() && collision.gameObject.GetComponent<Target>().GetCarried() == 0 && !IsFrozen())
+        if (collision.gameObject.CompareTag("Target") &&
+            collision.gameObject.GetComponent<Target>().GetInBase() != GetTeam() &&
+            collision.gameObject.GetComponent<Target>().GetCarried() == 0 && !IsFrozen())
         {
             //Add rewards here
         }
@@ -149,13 +152,14 @@ public class LSD : CogsAgent
         {
             //Add rewards here
         }
+
         base.OnCollisionEnter(collision);
     }
 
 
-
     //  --------------------------HELPERS----------------------------
-     private void AssignBasicRewards() {
+    private void AssignBasicRewards()
+    {
         rewardDict = new Dictionary<string, float>();
 
         rewardDict.Add("frozen", 0f);
@@ -176,102 +180,122 @@ public class LSD : CogsAgent
         Vector3 left = -transform.up;
 
         //fowardAxis:
-            // 0 -> do nothing
-            // 1 -> go forward
-            // 2 -> go backward
-        if (forwardAxis == 0){
+        // 0 -> do nothing
+        // 1 -> go forward
+        // 2 -> go backward
+        if (forwardAxis == 0)
+        {
             //do nothing. This case is not necessary to include, it's only here to explicitly show what happens in case 0
         }
-        else if (forwardAxis == 1){
+        else if (forwardAxis == 1)
+        {
             dirToGo = forward;
         }
-        else if (forwardAxis == 2){
+        else if (forwardAxis == 2)
+        {
             //TODO-1: Tell your agent to go backward!
             dirToGo = backward;
-
         }
 
         //rotateAxis:
-            // 0 -> do nothing
-            // 1 -> go right
-            // 2 -> go left
-        if (rotateAxis == 0){
+        // 0 -> do nothing
+        // 1 -> go right
+        // 2 -> go left
+        if (rotateAxis == 0)
+        {
             //do nothing
-        } else if (rotateAxis == 1) {
+        }
+        else if (rotateAxis == 1)
+        {
             rotateDir = right;
-        } else {
+        }
+        else
+        {
             rotateDir = left;
         }
 
 
         //shoot
-        if (shootAxis == 1){
+        if (shootAxis == 1)
+        {
             SetLaser(true);
         }
-        else {
+        else
+        {
             SetLaser(false);
         }
 
         //go to the nearest target
-        if (goToTargetAxis == 1){
+        if (goToTargetAxis == 1)
+        {
             GoToNearestTarget();
         }
 
-        if (goToBaseAxis == 1) {
+        if (goToBaseAxis == 1)
+        {
             GoToBase();
         }
     }
 
     // Go to home base
-    private void GoToBase(){
+    private void GoToBase()
+    {
         TurnAndGo(GetYAngle(myBase));
     }
 
     // Go to the nearest target
-    private void GoToNearestTarget(){
+    private void GoToNearestTarget()
+    {
         GameObject target = GetNearestTarget();
-        if (target != null){
+        if (target != null)
+        {
             float rotation = GetYAngle(target);
             TurnAndGo(rotation);
         }
     }
 
     // Rotate and go in specified direction
-    private void TurnAndGo(float rotation){
-
-        if(rotation < -5f){
+    private void TurnAndGo(float rotation)
+    {
+        if (rotation < -5f)
+        {
             rotateDir = transform.up;
         }
-        else if (rotation > 5f){
+        else if (rotation > 5f)
+        {
             rotateDir = -transform.up;
         }
-        else {
+        else
+        {
             dirToGo = transform.forward;
         }
     }
 
     // return reference to nearest target
-    protected GameObject GetNearestTarget(){
+    protected GameObject GetNearestTarget()
+    {
         float distance = 200;
         GameObject nearestTarget = null;
         foreach (var target in targets)
         {
             float currentDistance = Vector3.Distance(target.transform.localPosition, transform.localPosition);
-            if (currentDistance < distance && target.GetComponent<Target>().GetCarried() == 0 && target.GetComponent<Target>().GetInBase() != team){
+            if (currentDistance < distance && target.GetComponent<Target>().GetCarried() == 0 &&
+                target.GetComponent<Target>().GetInBase() != team)
+            {
                 distance = currentDistance;
                 nearestTarget = target;
             }
         }
+
         return nearestTarget;
     }
 
-    private float GetYAngle(GameObject target) {
+    private float GetYAngle(GameObject target)
+    {
+        Vector3 targetDir = target.transform.position - transform.position;
+        Vector3 forward = transform.forward;
 
-       Vector3 targetDir = target.transform.position - transform.position;
-       Vector3 forward = transform.forward;
-
-      float angle = Vector3.SignedAngle(targetDir, forward, Vector3.up);
-      return angle;
-
+        float angle = Vector3.SignedAngle(targetDir, forward, Vector3.up);
+        return angle;
     }
 }
