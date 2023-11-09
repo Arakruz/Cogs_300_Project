@@ -104,6 +104,7 @@ public class LSD : CogsAgent
         int goToTargetAxis = (int)actions.DiscreteActions[3];
         int goToBaseAxis = (int)actions.DiscreteActions[4];
         
+        AddReward(0.0001f);
         if (IsFrozen()) AddReward(rewardDict["frozen"]);
         if (enemy.GetComponent<CogsAgent>().IsFrozen()) AddReward(rewardDict["enemy-frozen"]);
 
@@ -118,16 +119,13 @@ public class LSD : CogsAgent
         if (collision.gameObject.CompareTag("HomeBase") &&
             collision.gameObject.GetComponent<HomeBase>().team == GetTeam())
         {
-            if (!carriedTargets.Any())
+            if (GetCarrying() == 0)
             {
                 AddReward(rewardDict["in-base-for-nothing"]);
             }
             else
             {
-                foreach (var target in carriedTargets)
-                {
-                    AddReward(rewardDict["dropped-one-target"]);
-                }
+                AddReward(rewardDict["dropped-one-target"] * GetCarrying());
             }
         } 
 
