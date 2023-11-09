@@ -185,12 +185,12 @@ public class LSD : CogsAgent
         SetLaser(shootAxis == 1);
 
         //go to the nearest target
-        if (goToTargetAxis == 1) GoToNearestTarget();
+        if (goToTargetAxis == 1) 
         {
             GoToNearestTarget();
         }
 
-        if (goToBaseAxis == 1) GoToBase();
+        if (goToBaseAxis == 1) 
         {
             GoToBase();
         }
