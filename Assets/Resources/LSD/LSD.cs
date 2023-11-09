@@ -104,7 +104,7 @@ public class LSD : CogsAgent
         int goToTargetAxis = (int)actions.DiscreteActions[3];
         int goToBaseAxis = (int)actions.DiscreteActions[4];
         
-        AddReward(0.0001f);
+        AddReward(-0.0001f);
         if (IsFrozen()) AddReward(rewardDict["frozen"]);
         if (enemy.GetComponent<CogsAgent>().IsFrozen()) AddReward(rewardDict["enemy-frozen"]);
 
