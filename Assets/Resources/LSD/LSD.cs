@@ -62,6 +62,7 @@ public class LSD : CogsAgent
         // Distance from agent to enemy (for the laser range)
         var enemyToAgentDistance = Vector3.Distance(agentPosition, enemyPosition);
         sensor.AddObservation(enemyToAgentDistance);
+        //sensor.AddObservation(GetYAngle(enemy));
         
         // for each target in the environment, add: its position, whether it is being carried,
         // and whether it is in a base
@@ -104,7 +105,8 @@ public class LSD : CogsAgent
         int goToTargetAxis = (int)actions.DiscreteActions[3];
         int goToBaseAxis = (int)actions.DiscreteActions[4];
         
-        AddReward(-0.0001f);
+        AddReward(-0.000005f);
+        if (IsLaserOn()) AddReward(rewardDict["shooting-laser"]);
         if (IsFrozen()) AddReward(rewardDict["frozen"]);
         if (enemy.GetComponent<CogsAgent>().IsFrozen()) AddReward(rewardDict["enemy-frozen"]);
 
@@ -157,15 +159,17 @@ public class LSD : CogsAgent
         // TODO fix these
         rewardDict = new Dictionary<string, float>();
 
-        rewardDict.Add("frozen", -1f); 
-        rewardDict.Add("shooting-laser", 0f); // unused
-        rewardDict.Add("hit-enemy", 0.5f); // unused
-        rewardDict.Add("dropped-one-target", 1f); 
+        rewardDict.Add("hit-enemy", 1f); // unused
         rewardDict.Add("dropped-targets", 0f); // unused
-        rewardDict.Add("hit-wall", -0.9f);
-        rewardDict.Add("captured-target", 0.5f);
-        rewardDict.Add("in-base-for-nothing", -0.5f);
-        rewardDict.Add("enemy-frozen", 0.1f);
+        
+        rewardDict.Add("frozen", -0.001f); 
+        rewardDict.Add("shooting-laser", -0.00005f); 
+        rewardDict.Add("in-base-for-nothing", -0.00005f);
+        rewardDict.Add("hit-wall", -0.001f);
+        
+        rewardDict.Add("dropped-one-target", 0.005f); 
+        rewardDict.Add("captured-target", 0.0005f);
+        rewardDict.Add("enemy-frozen", 0.008f);
     }
 
     private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis, int goToBaseAxis)
