@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Integrations.Match3;
 
 public class LSD : CogsAgent
 {
@@ -38,17 +40,25 @@ public class LSD : CogsAgent
         sensor.AddObservation(localVelocity.x);
         sensor.AddObservation(localVelocity.z);
 
-        // Time remaning
+        // Time remaining and frozen time
         sensor.AddObservation(timer.GetComponent<Timer>().GetTimeRemaning());
+        sensor.AddObservation(GetFrozenTime());
 
         // Agent's current rotation
         var localRotation = transform.rotation;
-        sensor.AddObservation(transform.rotation.y);
+        sensor.AddObservation(localRotation.y);
 
-        // Agent and home base's position
-        sensor.AddObservation(this.transform.localPosition);
+        // Agent, home base, and enemy's position
+        var agentPosition = this.transform.localPosition;
+        var enemyPosition = enemy.transform.localPosition;
+        sensor.AddObservation(agentPosition);
         sensor.AddObservation(baseLocation.localPosition);
-
+        sensor.AddObservation(enemyPosition);
+        
+        // Distance from agent to enemy (for the laser range)
+        var enemyToAgentDistance = Vector3.Distance(agentPosition, enemyPosition);
+        sensor.AddObservation(enemyToAgentDistance);
+        
         // for each target in the environment, add: its position, whether it is being carried,
         // and whether it is in a base
         foreach (GameObject target in targets)
