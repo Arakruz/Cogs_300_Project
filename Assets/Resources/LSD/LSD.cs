@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
@@ -51,9 +53,11 @@ public class LSD : CogsAgent
         // Agent, home base, and enemy's position
         var agentPosition = this.transform.localPosition;
         var enemyPosition = enemy.transform.localPosition;
+        
         sensor.AddObservation(agentPosition);
         sensor.AddObservation(baseLocation.localPosition);
-        sensor.AddObservation(enemyPosition);
+        // In testing both positions are being given, filter the actual enemy. Might be unnecessary during actual play
+        if (!enemy.transform.localPosition.Equals(agentPosition)) sensor.AddObservation(enemyPosition);
         
         // Distance from agent to enemy (for the laser range)
         var enemyToAgentDistance = Vector3.Distance(agentPosition, enemyPosition);
@@ -99,6 +103,9 @@ public class LSD : CogsAgent
         int shootAxis = (int)actions.DiscreteActions[2];
         int goToTargetAxis = (int)actions.DiscreteActions[3];
         int goToBaseAxis = (int)actions.DiscreteActions[4];
+        
+        if (IsFrozen()) AddReward(rewardDict["frozen"]);
+        if (enemy.GetComponent<CogsAgent>().IsFrozen()) AddReward(rewardDict["enemy-frozen"]);
 
         MovePlayer(forwardAxis, rotateAxis, shootAxis, goToTargetAxis, goToBaseAxis);
     }
@@ -111,8 +118,18 @@ public class LSD : CogsAgent
         if (collision.gameObject.CompareTag("HomeBase") &&
             collision.gameObject.GetComponent<HomeBase>().team == GetTeam())
         {
-            //Add rewards here
-        }
+            if (!carriedTargets.Any())
+            {
+                AddReward(rewardDict["in-base-for-nothing"]);
+            }
+            else
+            {
+                foreach (var target in carriedTargets)
+                {
+                    AddReward(rewardDict["dropped-one-target"]);
+                }
+            }
+        } 
 
         base.OnTriggerEnter(collision);
     }
@@ -124,12 +141,12 @@ public class LSD : CogsAgent
             collision.gameObject.GetComponent<Target>().GetInBase() != GetTeam() &&
             collision.gameObject.GetComponent<Target>().GetCarried() == 0 && !IsFrozen())
         {
-            //Add rewards here
+            AddReward(rewardDict["captured-target"]);
         }
 
         if (collision.gameObject.CompareTag("Wall"))
         {
-            //Add rewards here
+            AddReward(rewardDict["hit-wall"]);
         }
 
         base.OnCollisionEnter(collision);
@@ -139,13 +156,18 @@ public class LSD : CogsAgent
     //  --------------------------HELPERS----------------------------
     private void AssignBasicRewards()
     {
+        // TODO fix these
         rewardDict = new Dictionary<string, float>();
 
-        rewardDict.Add("frozen", 0f);
-        rewardDict.Add("shooting-laser", 0f);
-        rewardDict.Add("hit-enemy", 0f);
-        rewardDict.Add("dropped-one-target", 0f);
-        rewardDict.Add("dropped-targets", 0f);
+        rewardDict.Add("frozen", -1f); 
+        rewardDict.Add("shooting-laser", 0f); // unused
+        rewardDict.Add("hit-enemy", 0.5f); // unused
+        rewardDict.Add("dropped-one-target", 1f); 
+        rewardDict.Add("dropped-targets", 0f); // unused
+        rewardDict.Add("hit-wall", -0.9f);
+        rewardDict.Add("captured-target", 0.5f);
+        rewardDict.Add("in-base-for-nothing", -0.5f);
+        rewardDict.Add("enemy-frozen", 0.1f);
     }
 
     private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis, int goToBaseAxis)
