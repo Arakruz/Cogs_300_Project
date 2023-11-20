@@ -1,0 +1,508 @@
+Mono path[0] = 'C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Managed'
+Mono config path = 'C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/MonoBleedingEdge/etc'
+Initialize engine version: 2020.3.40f1 (ba48d4efcef1)
+[Subsystems] Discovering subsystems at path C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/UnitySubsystems
+Forcing GfxDevice: Null
+GfxDevice: creating device client; threaded=0
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Begin MonoManager ReloadAssembly
+- Completed reload, in  0.313 seconds
+ERROR: Shader Sprites/Default shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+Microsoft Media Foundation video decoding to texture disabled: graphics device is Null, only Direct3D 11 and Direct3D 12 (only on desktop) are supported for hardware-accelerated video decoding.
+ERROR: Shader Sprites/Mask shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+ERROR: Shader Legacy Shaders/VertexLit shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Standard' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader Standard shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+WARNING: Shader Unsupported: 'Standard' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+ERROR: Shader GUI/Text Shader shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+UnloadTime: 0.465000 ms
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libcoreclr.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libdl.so
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib.dll
+Fallback handler could not load library C:/Users/pedro/OneDrive/Documents/GitHub/Cogs_300_Project/Build/Final Project Testing V2_Data/Mono/libSystem.dylib
+ERROR: Shader UI/Default shader is not supported on this GPU (none of subshaders/fallbacks are suitable)
+Agent 2 wins by capture
+Agent 2 wins by capture
+Draw!
+Draw!
+Draw!
+Agent 1 wins by capture
+Agent 2 wins by carry
+Draw!
+Agent 1 wins by carry
+Agent 1 wins by carry
+Agent 1 wins by carry
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Agent 2 wins by carry
+Draw!
+Draw!
+Agent 2 wins by carry
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Agent 1 wins by carry
+Agent 1 wins by carry
+Agent 1 wins by carry
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Agent 2 wins by carry
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Draw!
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project;C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project\Build;C:\Windows;C:\Windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 534, UserName: 'pedro'
+OS-Version: 10.0.0
+C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project\Build\Final Project Testing V2.exe:Final Project Testing V2.exe (00007FF703B70000), size: 675840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.40.18644
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FFD654B0000), size: 2191360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FFD64590000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FFD629A0000), size: 3825664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project\Build\UnityPlayer.dll:UnityPlayer.dll (00007FFCDF8F0000), size: 29388800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.40.18644
+C:\Windows\System32\USER32.dll:USER32.dll (00007FFD64D60000), size: 1757184 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\win32u.dll:win32u.dll (00007FFD62DF0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FFD63F90000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FFD62FD0000), size: 1146880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FFD62D50000), size: 630784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.608
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FFD630F0000), size: 1118208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.608
+C:\Windows\System32\ole32.dll:ole32.dll (00007FFD64F50000), size: 1699840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\combase.dll:combase.dll (00007FFD64200000), size: 3710976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FFD63E70000), size: 1142784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FFD646F0000), size: 385024 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FFD63C70000), size: 684032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.22621.608
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FFD64750000), size: 4669440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1778
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FFD64140000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\System32\sechost.dll:sechost.dll (00007FFD63FC0000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FFD633F0000), size: 8749056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FFD65160000), size: 880640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1992
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FFD64F10000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1344
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FFD62830000), size: 1466368 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FFD64CD0000), size: 462848 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FFD5BA30000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFD0D750000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FFD5A0E0000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FFD5B5A0000), size: 1273856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\SYSTEM32\bcrypt.dll:bcrypt.dll (00007FFD621D0000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1992
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FFD61050000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FFD5FF10000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FFD0ECA0000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.608
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FFD5FF80000), size: 221184 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FFD618C0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FFD62F50000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FFD5FC90000), size: 700416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2283
+C:\Windows\System32\shcore.dll:shcore.dll (00007FFD652C0000), size: 995328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2070
+C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project\Build\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFCEFA20000), size: 7860224 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\PSAPI.DLL:PSAPI.DLL (00007FFD64D50000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FFD60750000), size: 9379840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FFD60610000), size: 1302528 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FFD62760000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1928
+C:\Windows\SYSTEM32\iphlpapi.dll:iphlpapi.dll (00007FFD61360000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FFD63D20000), size: 1359872 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FFD653C0000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FFD56040000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2070
+C:\Windows\System32\DEVOBJ.dll:DEVOBJ.dll (00007FFD624F0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1344
+C:\Windows\SYSTEM32\cfgmgr32.dll:cfgmgr32.dll (00007FFD62520000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1344
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FFD4B8D0000), size: 2015232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2070
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FFD60300000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\powrprof.dll:powrprof.dll (00007FFD61680000), size: 315392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FFD61660000), size: 77824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Users\pedro\OneDrive\Documents\GitHub\Cogs_300_Project\Build\Final Project Testing V2_Data\Plugins\x86_64\grpc_csharp_ext.x64.dll:grpc_csharp_ext.x64.dll (00007FFD08A00000), size: 1830912 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FFD06060000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\CRYPTBASE.DLL:CRYPTBASE.DLL (00007FFD61FE0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FFD61DA0000), size: 430080 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FFD613E0000), size: 1019904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\System32\NSI.dll:NSI.dll (00007FFD63C60000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FFD563C0000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\System32\fwpuclnt.dll:fwpuclnt.dll (00007FFD5A4F0000), size: 540672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FFD61FC0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\system32\rsaenh.dll:rsaenh.dll (00007FFD61880000), size: 217088 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FFD3C490000), size: 1351680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2361
+C:\Windows\SYSTEM32\TextShaping.dll:TextShaping.dll (00007FFD3AFB0000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2428
+C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2361_none_2712ced57382f843\comctl32.dll:comctl32.dll (00007FFD4C980000), size: 2699264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.10.22621.2361
+C:\Windows\SYSTEM32\CoreMessaging.dll:CoreMessaging.dll (00007FFD5F780000), size: 1257472 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1635
+C:\Windows\SYSTEM32\CoreUIComponents.dll:CoreUIComponents.dll (00007FFD5B230000), size: 3588096 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FFD4EBD0000), size: 2285568 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\SspiCli.dll:SspiCli.dll (00007FFD61B90000), size: 270336 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2215
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFCEFD375CF (mono-2.0-bdwgc) GC_malloc_uncollectable
+0x00007FFCEFD2AF5B (mono-2.0-bdwgc) mono_breakpoint_clean_code
+0x00007FFCEFD2AB92 (mono-2.0-bdwgc) mono_breakpoint_clean_code
+0x00007FFCEFD33EEF (mono-2.0-bdwgc) GC_malloc_uncollectable
+0x00007FFCEFD2B075 (mono-2.0-bdwgc) mono_breakpoint_clean_code
+0x00007FFCEFD2FEB8 (mono-2.0-bdwgc) GC_gcj_malloc
+0x00007FFCEFD2FB8F (mono-2.0-bdwgc) GC_gcj_malloc
+0x00007FFCEFD329B0 (mono-2.0-bdwgc) GC_malloc_kind
+0x00007FFCEFB386E1 (mono-2.0-bdwgc) mono_object_hash
+0x00007FFCEFAD42E5 (mono-2.0-bdwgc) mono_array_new_specific
+0x00007FFCEFADF483 (mono-2.0-bdwgc) mono_vtable_get_static_field_data
+0x000001EF69D8247A (Mono JIT Code) (wrapper managed-to-native) object:__icall_wrapper_ves_icall_array_new_specific (intptr,int)
+0x000001F10D16EAAB (Mono JIT Code) Google.Protobuf.Collections.RepeatedField`1<single>:EnsureSize (int)
+0x000001F10D16E9BB (Mono JIT Code) Google.Protobuf.Collections.RepeatedField`1<single>:Add (single)
+0x000001F10D16DA03 (Mono JIT Code) Unity.MLAgents.GrpcExtensions:GetObservationProto (Unity.MLAgents.Sensors.ISensor,Unity.MLAgents.Sensors.ObservationWriter)
+0x000001F10D16CA5B (Mono JIT Code) Unity.MLAgents.RpcCommunicator:PutObservations (string,Unity.MLAgents.AgentInfo,System.Collections.Generic.List`1<Unity.MLAgents.Sensors.ISensor>)
+0x000001F10D16C776 (Mono JIT Code) Unity.MLAgents.Policies.RemotePolicy:RequestDecision (Unity.MLAgents.AgentInfo,System.Collections.Generic.List`1<Unity.MLAgents.Sensors.ISensor>)
+0x000001F10D16765D (Mono JIT Code) Unity.MLAgents.Agent:SendInfoToBrain ()
+0x000001F10D16709B (Mono JIT Code) Unity.MLAgents.Agent:SendInfo ()
+0x000001F10D165EA2 (Mono JIT Code) (wrapper delegate-invoke) <Module>:invoke_void ()
+0x000001F10D1658D6 (Mono JIT Code) Unity.MLAgents.Academy:EnvironmentStep ()
+0x000001F10D165553 (Mono JIT Code) Unity.MLAgents.AcademyFixedUpdateStepper:FixedUpdate ()
+0x000001F10CCFE990 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+0x00007FFCEFB500E0 (mono-2.0-bdwgc) mono_get_runtime_build_info
+0x00007FFCEFAD2AC2 (mono-2.0-bdwgc) mono_perfcounters_init
+0x00007FFCEFADBB1F (mono-2.0-bdwgc) mono_runtime_invoke
+0x00007FFCE01E161D (UnityPlayer) UnityMain
+0x00007FFCE01DE6E2 (UnityPlayer) UnityMain
+0x00007FFCE01C5F93 (UnityPlayer) UnityMain
+0x00007FFCE01C606F (UnityPlayer) UnityMain
+0x00007FFCDFF327E0 (UnityPlayer) UnityMain
+0x00007FFCE0069C1A (UnityPlayer) UnityMain
+0x00007FFCE0069CC0 (UnityPlayer) UnityMain
+0x00007FFCE006DF58 (UnityPlayer) UnityMain
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FFCDFE2D69A)
+0x00007FFCDFE2D69A (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FFCDFE2BB6B)
+0x00007FFCDFE2BB6B (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FFCDFE30B4B)
+0x00007FFCDFE30B4B (UnityPlayer) (function-name not available)
+0x00007FFCDFE31C6B (UnityPlayer) UnityMain
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF703B711F2)
+0x00007FF703B711F2 (Final Project Testing V2) (function-name not available)
+0x00007FFD645A257D (KERNEL32) BaseThreadInitThunk
+0x00007FFD6550AA78 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/pedro/AppData/Local/Temp/DefaultCompany/Final Project Testing V2/Crashes

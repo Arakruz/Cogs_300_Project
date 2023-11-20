@@ -1,0 +1,65 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 2315478,
+                "file_path": "results\\LimitedRewards\\Agent\\Agent-2315478.onnx",
+                "reward": null,
+                "creation_time": 1699849633.7930074,
+                "auxillary_file_paths": [
+                    "results\\LimitedRewards\\Agent\\Agent-2315478.pt"
+                ]
+            },
+            {
+                "steps": 2499980,
+                "file_path": "results\\LimitedRewards\\Agent\\Agent-2499980.onnx",
+                "reward": null,
+                "creation_time": 1699851223.688135,
+                "auxillary_file_paths": [
+                    "results\\LimitedRewards\\Agent\\Agent-2499980.pt"
+                ]
+            },
+            {
+                "steps": 2981298,
+                "file_path": "results\\LimitedRewards\\Agent\\Agent-2981298.onnx",
+                "reward": null,
+                "creation_time": 1699852178.4260042,
+                "auxillary_file_paths": [
+                    "results\\LimitedRewards\\Agent\\Agent-2981298.pt"
+                ]
+            },
+            {
+                "steps": 2999986,
+                "file_path": "results\\LimitedRewards\\Agent\\Agent-2999986.onnx",
+                "reward": null,
+                "creation_time": 1699856737.909537,
+                "auxillary_file_paths": [
+                    "results\\LimitedRewards\\Agent\\Agent-2999986.pt"
+                ]
+            },
+            {
+                "steps": 3103296,
+                "file_path": "results\\LimitedRewards\\Agent\\Agent-3103296.onnx",
+                "reward": null,
+                "creation_time": 1699856939.067741,
+                "auxillary_file_paths": [
+                    "results\\LimitedRewards\\Agent\\Agent-3103296.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3103296,
+            "file_path": "results\\LimitedRewards\\Agent.onnx",
+            "reward": null,
+            "creation_time": 1699856939.067741,
+            "auxillary_file_paths": [
+                "results\\LimitedRewards\\Agent\\Agent-3103296.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

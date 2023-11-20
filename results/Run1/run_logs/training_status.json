@@ -1,0 +1,65 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 32499972,
+                "file_path": "results\\Run1\\Agent\\Agent-32499972.onnx",
+                "reward": null,
+                "creation_time": 1699938090.2279675,
+                "auxillary_file_paths": [
+                    "results\\Run1\\Agent\\Agent-32499972.pt"
+                ]
+            },
+            {
+                "steps": 32999936,
+                "file_path": "results\\Run1\\Agent\\Agent-32999936.onnx",
+                "reward": null,
+                "creation_time": 1699939004.8277376,
+                "auxillary_file_paths": [
+                    "results\\Run1\\Agent\\Agent-32999936.pt"
+                ]
+            },
+            {
+                "steps": 33499950,
+                "file_path": "results\\Run1\\Agent\\Agent-33499950.onnx",
+                "reward": -0.11839000503532589,
+                "creation_time": 1699939934.5032146,
+                "auxillary_file_paths": [
+                    "results\\Run1\\Agent\\Agent-33499950.pt"
+                ]
+            },
+            {
+                "steps": 33999950,
+                "file_path": "results\\Run1\\Agent\\Agent-33999950.onnx",
+                "reward": -0.12025000527501106,
+                "creation_time": 1699940884.5866637,
+                "auxillary_file_paths": [
+                    "results\\Run1\\Agent\\Agent-33999950.pt"
+                ]
+            },
+            {
+                "steps": 34376172,
+                "file_path": "results\\Run1\\Agent\\Agent-34376172.onnx",
+                "reward": null,
+                "creation_time": 1699941570.3233862,
+                "auxillary_file_paths": [
+                    "results\\Run1\\Agent\\Agent-34376172.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 34376172,
+            "file_path": "results\\Run1\\Agent.onnx",
+            "reward": null,
+            "creation_time": 1699941570.3233862,
+            "auxillary_file_paths": [
+                "results\\Run1\\Agent\\Agent-34376172.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

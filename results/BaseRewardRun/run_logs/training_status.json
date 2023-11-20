@@ -1,0 +1,65 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 16514126,
+                "file_path": "results\\BaseRewardRun\\Agent\\Agent-16514126.onnx",
+                "reward": null,
+                "creation_time": 1699751998.7974777,
+                "auxillary_file_paths": [
+                    "results\\BaseRewardRun\\Agent\\Agent-16514126.pt"
+                ]
+            },
+            {
+                "steps": 16670294,
+                "file_path": "results\\BaseRewardRun\\Agent\\Agent-16670294.onnx",
+                "reward": null,
+                "creation_time": 1699837362.7435064,
+                "auxillary_file_paths": [
+                    "results\\BaseRewardRun\\Agent\\Agent-16670294.pt"
+                ]
+            },
+            {
+                "steps": 16953804,
+                "file_path": "results\\BaseRewardRun\\Agent\\Agent-16953804.onnx",
+                "reward": null,
+                "creation_time": 1699838175.2930956,
+                "auxillary_file_paths": [
+                    "results\\BaseRewardRun\\Agent\\Agent-16953804.pt"
+                ]
+            },
+            {
+                "steps": 16999956,
+                "file_path": "results\\BaseRewardRun\\Agent\\Agent-16999956.onnx",
+                "reward": null,
+                "creation_time": 1699838351.513595,
+                "auxillary_file_paths": [
+                    "results\\BaseRewardRun\\Agent\\Agent-16999956.pt"
+                ]
+            },
+            {
+                "steps": 17400568,
+                "file_path": "results\\BaseRewardRun\\Agent\\Agent-17400568.onnx",
+                "reward": null,
+                "creation_time": 1699839126.1710508,
+                "auxillary_file_paths": [
+                    "results\\BaseRewardRun\\Agent\\Agent-17400568.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 17400568,
+            "file_path": "results\\BaseRewardRun\\Agent.onnx",
+            "reward": null,
+            "creation_time": 1699839126.1710508,
+            "auxillary_file_paths": [
+                "results\\BaseRewardRun\\Agent\\Agent-17400568.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

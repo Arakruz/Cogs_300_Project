@@ -1,0 +1,66 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 43081134,
+                "file_path": "results\\RunNoHelpNoSelf\\Agent\\Agent-43081134.onnx",
+                "reward": null,
+                "creation_time": 1699677031.1523018,
+                "auxillary_file_paths": [
+                    "results\\RunNoHelpNoSelf\\Agent\\Agent-43081134.pt"
+                ]
+            },
+            {
+                "steps": 43304188,
+                "file_path": "results\\RunNoHelpNoSelf\\Agent\\Agent-43304188.onnx",
+                "reward": null,
+                "creation_time": 1699683171.345915,
+                "auxillary_file_paths": [
+                    "results\\RunNoHelpNoSelf\\Agent\\Agent-43304188.pt"
+                ]
+            },
+            {
+                "steps": 43499984,
+                "file_path": "results\\RunNoHelpNoSelf\\Agent\\Agent-43499984.onnx",
+                "reward": null,
+                "creation_time": 1699683644.0602326,
+                "auxillary_file_paths": [
+                    "results\\RunNoHelpNoSelf\\Agent\\Agent-43499984.pt"
+                ]
+            },
+            {
+                "steps": 43999944,
+                "file_path": "results\\RunNoHelpNoSelf\\Agent\\Agent-43999944.onnx",
+                "reward": -3.040250211954117,
+                "creation_time": 1699684892.8363297,
+                "auxillary_file_paths": [
+                    "results\\RunNoHelpNoSelf\\Agent\\Agent-43999944.pt"
+                ]
+            },
+            {
+                "steps": 44123132,
+                "file_path": "results\\RunNoHelpNoSelf\\Agent\\Agent-44123132.onnx",
+                "reward": -3.036500185728073,
+                "creation_time": 1699685195.1682153,
+                "auxillary_file_paths": [
+                    "results\\RunNoHelpNoSelf\\Agent\\Agent-44123132.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 44123132,
+            "file_path": "results\\RunNoHelpNoSelf\\Agent.onnx",
+            "reward": -3.036500185728073,
+            "creation_time": 1699685195.1682153,
+            "auxillary_file_paths": [
+                "results\\RunNoHelpNoSelf\\Agent\\Agent-44123132.pt"
+            ]
+        },
+        "elo": -0.003703284204778723
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
