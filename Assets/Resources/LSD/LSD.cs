@@ -50,19 +50,26 @@ public class LSD : CogsAgent
         var localRotation = transform.rotation;
         sensor.AddObservation(localRotation.y);
 
-        // Agent, home base, and enemy's position
+        // Agent position and distance to base
         var agentPosition = this.transform.localPosition;
-        var enemyPosition = enemy.transform.localPosition;
-        
         sensor.AddObservation(agentPosition);
-        sensor.AddObservation(baseLocation.localPosition);
+        sensor.AddObservation(DistanceToBase());
+        
+        // Move and turn speeds
+        sensor.AddObservation(GetMoveSpeed());
+        sensor.AddObservation(GetTurnSpeed());
+        
+        // If the laser is on or not
+        sensor.AddObservation(IsLaserOn());
+        
         // In testing both positions are being given, filter the actual enemy. Might be unnecessary during actual play
+        var enemyPosition = enemy.transform.localPosition;
         if (!enemy.transform.localPosition.Equals(agentPosition)) sensor.AddObservation(enemyPosition);
         
-        // Distance from agent to enemy (for the laser range)
+        // Distance from agent to enemy (for the laser range) and enemy angle
         var enemyToAgentDistance = Vector3.Distance(agentPosition, enemyPosition);
         sensor.AddObservation(enemyToAgentDistance);
-        //sensor.AddObservation(GetYAngle(enemy));
+        sensor.AddObservation(GetYAngle(enemy));
         
         // for each target in the environment, add: its position, whether it is being carried,
         // and whether it is in a base
@@ -93,7 +100,7 @@ public class LSD : CogsAgent
         if (Input.GetKey(KeyCode.LeftArrow))  discreteActionsOut[1] = 2;
         if (Input.GetKey(KeyCode.Space))      discreteActionsOut[2] = 1; //Shoot
         if (Input.GetKey(KeyCode.A))          discreteActionsOut[3] = 1; //GoToNearestTarget
-        if (Input.GetKey(KeyCode.S))          discreteActionsOut[4] = 1;
+        if (Input.GetKey(KeyCode.S))          discreteActionsOut[4] = 1; //GoToBase
     }
 
     // What to do when an action is received (i.e. when the Brain gives the agent information about possible actions)
@@ -105,11 +112,8 @@ public class LSD : CogsAgent
         int goToTargetAxis = (int)actions.DiscreteActions[3];
         int goToBaseAxis = (int)actions.DiscreteActions[4];
         
-        // Used as an incentive the agent to do something 
-        AddReward(rewardDict["idle"]);
-        //if (IsLaserOn()) AddReward(rewardDict["shooting-laser"]);
-        if (IsFrozen()) AddReward(rewardDict["frozen"]);
-        if (enemy.GetComponent<CogsAgent>().IsFrozen()) AddReward(rewardDict["enemy-frozen"]);
+        // Used as an incentive the agent to do things 
+        AddReward(rewardDict["passive"]);
 
         MovePlayer(forwardAxis, rotateAxis, shootAxis, goToTargetAxis, goToBaseAxis);
     }
@@ -124,7 +128,8 @@ public class LSD : CogsAgent
         {
             if (GetCarrying() != 0)
             {
-                AddReward(rewardDict["dropped-one-target"] * GetCarrying());
+                // Reward for capturing targets
+                AddReward(rewardDict["capture-target"] * GetCarrying());
             }
         } 
 
@@ -138,11 +143,13 @@ public class LSD : CogsAgent
             collision.gameObject.GetComponent<Target>().GetInBase() != GetTeam() &&
             collision.gameObject.GetComponent<Target>().GetCarried() == 0 && !IsFrozen())
         {
-            //AddReward(rewardDict["captured-target"]);
+            // Reward for picking up a target
+            AddReward(rewardDict["pick-target"]);
         }
 
         if (collision.gameObject.CompareTag("Wall"))
         {
+            // Punishment for hitting a wall
             AddReward(rewardDict["hit-wall"]);
         }
 
@@ -153,20 +160,18 @@ public class LSD : CogsAgent
     //  --------------------------HELPERS----------------------------
     private void AssignBasicRewards()
     {
-        // TODO fix these
         rewardDict = new Dictionary<string, float>();
         
-        rewardDict.Add("hit-enemy", 1f); // unused
-        rewardDict.Add("dropped-targets", 0f); // unused
-        rewardDict.Add("shooting-laser", -0.00001f); //unused
+        rewardDict.Add("shooting-laser", -0.0001f); // used in parent class
+        rewardDict.Add("frozen", -0.001f); // used in parent class 
+        rewardDict.Add("dropped-targets", -0.001f); // used in parent class (bonus for multi target drop)
+        rewardDict.Add("dropped-one-target", -0.001f);  // used in parent class (reward per drop)
+        rewardDict.Add("passive", -0.00001f); // used in this class, incentives doing any actions
+        rewardDict.Add("hit-wall", -0.001f); // used in this class, punishes the agent for hitting walls
         
-        rewardDict.Add("idle", -0.00005f);
-        rewardDict.Add("frozen", -0.0005f); 
-        rewardDict.Add("hit-wall", -0.005f);
-        
-        rewardDict.Add("dropped-one-target", 0.005f); 
-        rewardDict.Add("captured-target", 0.0001f);
-        rewardDict.Add("enemy-frozen", 0.00005f);
+        rewardDict.Add("hit-enemy", 0.0005f); // used in parent class
+        rewardDict.Add("captured-target", 0.05f); // used in this class, reward for capturing a target
+        rewardDict.Add("pick-target", 0.01f); // used in this class, reward for picking up a target
     }
 
     private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis, int goToBaseAxis)

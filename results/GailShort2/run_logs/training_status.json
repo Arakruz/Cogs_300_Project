@@ -1,0 +1,65 @@
+{
+    "Agent": {
+        "checkpoints": [
+            {
+                "steps": 1499978,
+                "file_path": "results\\GailShort2\\Agent\\Agent-1499978.onnx",
+                "reward": null,
+                "creation_time": 1701118948.6197164,
+                "auxillary_file_paths": [
+                    "results\\GailShort2\\Agent\\Agent-1499978.pt"
+                ]
+            },
+            {
+                "steps": 1999942,
+                "file_path": "results\\GailShort2\\Agent\\Agent-1999942.onnx",
+                "reward": -0.2855499758152291,
+                "creation_time": 1701120183.8340962,
+                "auxillary_file_paths": [
+                    "results\\GailShort2\\Agent\\Agent-1999942.pt"
+                ]
+            },
+            {
+                "steps": 2499940,
+                "file_path": "results\\GailShort2\\Agent\\Agent-2499940.onnx",
+                "reward": -0.27920552050798303,
+                "creation_time": 1701121424.929072,
+                "auxillary_file_paths": [
+                    "results\\GailShort2\\Agent\\Agent-2499940.pt"
+                ]
+            },
+            {
+                "steps": 2999964,
+                "file_path": "results\\GailShort2\\Agent\\Agent-2999964.onnx",
+                "reward": null,
+                "creation_time": 1701122657.4865026,
+                "auxillary_file_paths": [
+                    "results\\GailShort2\\Agent\\Agent-2999964.pt"
+                ]
+            },
+            {
+                "steps": 3129340,
+                "file_path": "results\\GailShort2\\Agent\\Agent-3129340.onnx",
+                "reward": null,
+                "creation_time": 1701122982.487264,
+                "auxillary_file_paths": [
+                    "results\\GailShort2\\Agent\\Agent-3129340.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3129340,
+            "file_path": "results\\GailShort2\\Agent.onnx",
+            "reward": null,
+            "creation_time": 1701122982.487264,
+            "auxillary_file_paths": [
+                "results\\GailShort2\\Agent\\Agent-3129340.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

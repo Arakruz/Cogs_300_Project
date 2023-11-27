@@ -91,7 +91,7 @@ public class CogsAgent : Agent
     protected virtual void FixedUpdate() {
         moveSpeed = maxMoveSpeed - (0.05f * carriedTargets.Count);
         turnSpeed = maxTurnSpeed - (10f * carriedTargets.Count);
-        
+
         if (turnSpeed < 0) {
             turnSpeed = 0;
         }
