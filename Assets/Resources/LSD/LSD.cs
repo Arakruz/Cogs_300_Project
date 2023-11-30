@@ -66,10 +66,12 @@ public class LSD : CogsAgent
         var enemyPosition = enemy.transform.localPosition;
         if (!enemy.transform.localPosition.Equals(agentPosition)) sensor.AddObservation(enemyPosition);
         
-        // Distance from agent to enemy (for the laser range) and enemy angle
+        // Distance from agent to enemy, enemy angle, and if the enemy is close by or not
         var enemyToAgentDistance = Vector3.Distance(agentPosition, enemyPosition);
         sensor.AddObservation(enemyToAgentDistance);
         sensor.AddObservation(GetYAngle(enemy));
+        bool enemyCloseBy = enemyToAgentDistance <= 250;
+        sensor.AddObservation(enemyCloseBy);
         
         // for each target in the environment, add: its position, whether it is being carried,
         // and whether it is in a base
@@ -165,12 +167,12 @@ public class LSD : CogsAgent
         rewardDict.Add("shooting-laser", -0.0001f); // used in parent class
         rewardDict.Add("frozen", -0.001f); // used in parent class 
         rewardDict.Add("dropped-targets", -0.001f); // used in parent class (bonus for multi target drop)
-        rewardDict.Add("dropped-one-target", -0.001f);  // used in parent class (reward per drop)
+        rewardDict.Add("dropped-one-target", -0.005f);  // used in parent class (reward per drop)
         rewardDict.Add("passive", -0.00001f); // used in this class, incentives doing any actions
-        rewardDict.Add("hit-wall", -0.001f); // used in this class, punishes the agent for hitting walls
+        rewardDict.Add("hit-wall", -0.01f); // used in this class, punishes the agent for hitting walls
         
-        rewardDict.Add("hit-enemy", 0.0005f); // used in parent class
-        rewardDict.Add("captured-target", 0.05f); // used in this class, reward for capturing a target
+        rewardDict.Add("hit-enemy", 0.001f); // used in parent class
+        rewardDict.Add("captured-target", 0.1f); // used in this class, reward for capturing a target
         rewardDict.Add("pick-target", 0.01f); // used in this class, reward for picking up a target
     }
 
